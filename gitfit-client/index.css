@@ -1,0 +1,145 @@
+form {
+	text-align: center;
+	font-family: verdana;
+	color: ghostwhite;
+	font-size: xx-large;
+}
+
+
+
+label {
+    top: 0;
+    font-size: var(--font-size-small);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+.sub-header{
+	text-align: center;
+	font: bold 15px helvetica;
+	color:khaki !important;
+}
+
+.header{
+	font-family: 'Molengo', Georgia, Times, serif;
+	font-size: 56px;
+	line-height: 80px;
+	color: white;
+
+}
+
+.usercontainer{
+	text-align: center;
+	color: black;
+	font-style: unset;
+	font-weight: bolder;
+	font-family: 'Lekton', Helvetica, Arial, sans-serif;
+	background-color:burlywood;
+	padding: 25px;
+	border-radius: 60pc;
+	border-style: dashed;
+
+
+}
+
+body{
+	background-color: beige;
+	background-image: url("bxrgym.jpg")
+}
+
+
+
+input[type=text], input[type=number], input[type=email] {
+    border-radius: 50px;
+    border: 6px solid wheat;
+    padding: 20px;
+    width: 200px;
+    height: 15px;
+}
+
+
+select {
+	appearance: none;
+	outline: 0;
+	background: darkseagreen;
+	background-image: none;
+	height: 100%;
+	width: 100%;
+	color: black;
+	cursor: pointer;
+	border:1px solid black;
+	border-radius:3px;
+}
+.select {
+	position: relative;
+	width: 15em;
+	height: 2em;
+	overflow: hidden;
+	border-radius: .25em;
+	padding-bottom:10px;
+
+}
+
+.button {
+	width: 140px;
+	height: 45px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 2.5px;
+	font-weight: 500;
+	color: #000;
+	background-color: #fff;
+	border: none;
+	border-radius: 45px;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+  }
+
+.button:hover   {
+	background-color: #2EE59D;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: #fff;
+	transform: translateY(-7px);
+}
+
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+.picture{
+    width: 200px;
+    border-radius: 50%;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+	margin-right: auto;
+	border: 5px solid cornflowerblue;
+}
+
+
+
+.desc {
+	margin: 5rem 5rem;
+	font-family: 'Lekton', Helvetica, Arial, sans-serif;
+	color: cornsilk;
+	font-size: large;
+	background:steelblue;
+
+
+}
+
+.meal-form{
+	display: none;
+	height: auto;
+}
+
+.workout-form{
+	display: none;
+	height: auto;
+
+}
