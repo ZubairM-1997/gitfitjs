@@ -133,3 +133,6 @@ function deleteWorkoutFromServer(workoutObj){
 		method: "DELETE"
 	})
 }
+
+
+

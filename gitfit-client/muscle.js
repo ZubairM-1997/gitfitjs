@@ -7,6 +7,7 @@ function getEachMuscle(arrayMuscle) {
 }
 
 
+
 //renders the muscleObj, displays picture an name
 function renderMuscle(muscleObj) {
 	let muscleDiv = document.createElement("div")

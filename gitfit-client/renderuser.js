@@ -17,11 +17,11 @@ function renderUser(userObj) {
 	let bmr = document.createElement("span")
 
 	let workoutList = document.createElement("div")
-	workoutList.setAttribute("class", "workout-list")
+	workoutList.setAttribute("class", "list")
 	workoutList.innerHTML = "<h3>Your Workouts</h3>"
 
 	let mealsList = document.createElement("div")
-	mealsList.setAttribute("class", "meals-list")
+	mealsList.setAttribute("class", "list")
 	mealsList.innerHTML = "<h3>Your Meals</h3>"
 
 	let linebr = document.createElement("br")
@@ -108,8 +108,8 @@ function renderUser(userObj) {
 	muscleButton.addEventListener("click", () => {
 
 		userInfo.innerHTML = ""
-		document.querySelector('#w-form').style.display = 'block'
-		document.querySelector('#m-form').style.display = 'none' //meal-form
+		//document.querySelector('#w-form').style.display = 'block'
+		mealForm.style.display = 'none' //meal-form
 
 
 		fetchMuscles()
@@ -122,8 +122,8 @@ function renderUser(userObj) {
 
 		userInfo.innerHTML = ""
 
-		document.querySelector('#m-form').style.display = 'block' //meal-form
-		document.querySelector('#w-form').style.display = 'none' //workout form
+		//document.querySelector('#m-form').style.display = 'block' //meal-form
+		workoutForm.style.display = 'none' //workout form
 
 		fetchDiets()
 			.then((arrayDiet) => getEachDiet(arrayDiet))
