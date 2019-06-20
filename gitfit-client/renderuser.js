@@ -18,10 +18,12 @@ function renderUser(userObj) {
 
 	let workoutList = document.createElement("div")
 	workoutList.setAttribute("class", "list")
+	workoutList.setAttribute("id", "list-workouts")
 	workoutList.innerHTML = "<h3>Your Workouts</h3>"
 
 	let mealsList = document.createElement("div")
 	mealsList.setAttribute("class", "list")
+	mealsList.setAttribute("id", "list-meals")
 	mealsList.innerHTML = "<h3>Your Meals</h3>"
 
 	let linebr = document.createElement("br")

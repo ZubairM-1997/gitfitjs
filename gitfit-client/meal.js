@@ -3,6 +3,7 @@
 
 mealForm.addEventListener("submit", (event) => {
 	event.preventDefault()
+	debugger
 	mealData()
 })
 
@@ -68,7 +69,8 @@ function mealToServer(mealObj) {
 
 renderMeal = (mealObj) => {
 
-	let listMeals = document.querySelector(".meals-list")
+
+	let listMeals = document.querySelector("#list-meals")
 
 	let mealName = document.createElement("h3")
 	let mealCalories = document.createElement("span")

@@ -51,6 +51,10 @@ function fetchMuscles() {
 
 }
 
+function fetchMeals() {
+	return fetch(mealURL)
+		.then((resp) => resp.json())
+}
 
 //event listener for when a user clicks submit on the form
 userForm.addEventListener("submit", (event) => {

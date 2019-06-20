@@ -69,7 +69,7 @@ function workoutToServer(workoutObj) {
 
 }
 renderWorkout = (workoutObj) => {
-	const listWorkout = document.querySelector(".workout-list")
+	const listWorkout = document.querySelector("#list-workouts")
 
 	let workoutName = document.createElement("h3")
 	let setsWorkout = document.createElement("span")
