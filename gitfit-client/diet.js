@@ -1,6 +1,9 @@
 let mealForm = document.querySelector(".meal-form")
 mealForm.style.display = 'none'
 
+let mealModal = document.getElementById("meal-modal")
+mealModal.style.display = 'none'
+
 
 
 
@@ -16,8 +19,22 @@ function renderDiet(dietObj) {
 	let dietDescription = document.createElement("span")
 	let showBtn = document.createElement("button")
 
+	let relevantMeals = document.createElement("div")
+	let closeBtn = document.createElement("span")
+
 	dietButton.setAttribute("class", "button")
 	dietButton.setAttribute("id", `${dietObj.id}`)
+
+	showBtn.setAttribute("class", "button")
+	showBtn.setAttribute("id", `${dietObj.id}`)
+	showBtn.setAttribute("data-target", "#paymentSuccessModal")
+	showBtn.setAttribute("data-toggle", "modal")
+
+
+	relevantMeals.setAttribute("id", "relevant-meals")
+	relevantMeals.setAttribute("class", "modal")
+
+
 
 	dietDescription.setAttribute("class", "desc")
 
@@ -34,38 +51,53 @@ function renderDiet(dietObj) {
 
 	dietDiv.append(dietDescription)
 	dietDiv.append(showBtn)
+	dietDiv.append(relevantMeals)
 
 	dietDiv.append(linebreak)
 	dietDiv.append(br)
 	dietDiv.append(brrt)
+
 
 	userInfo.append(dietDiv)
 
 	dietButton.addEventListener('click', (event) => dietButtonEvent(dietObj))
 	//dietButtonEvent is on meal.js
 
-	showBtn.addEventListener("click", (event) => showAllMeals(dietObj))
+	showBtn.addEventListener("click", (event) => {
 
+		showAllMeals(dietObj)
+	})
 }
 
 
+
+
 function showAllMeals(dietObj){
+
 	fetchMeals().then((arrayMeals) => {
-	let arrayOfMeals =	arrayMeals.filter(meal => meal.diet_id === dietObj.id)
-	let listMeals = document.querySelector("#list-meals")
-	listMeals.innerHTML = ""
+
+	let arrayOfMeals =	arrayMeals.filter(meal => meal.diet_id === dietObj.id) //returns an array of meals which has the same id as the dietObject id
+
+	modalContent.innerHTML = ""
 
 	sendMeals(arrayOfMeals)
+
+
+
+	if (mealModal.style.display == "none") {
+		mealModal.style.display = "block"
+	} else {
+		mealModal.style.display = "none"
+	}
 
 	})
 
 }
 
 function sendMeals(arrayOfMeals){
-	arrayOfMeals.forEach((mealObj) => renderMeal(mealObj))
+	arrayOfMeals.forEach((mealObj) => showRelevantMeals(mealObj))
+
 }
-
-
 
 
 

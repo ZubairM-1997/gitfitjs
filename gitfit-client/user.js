@@ -56,6 +56,11 @@ function fetchMeals() {
 		.then((resp) => resp.json())
 }
 
+function fetchWorkouts() {
+	return fetch(workoutURL)
+		.then((resp) => resp.json())
+}
+
 //event listener for when a user clicks submit on the form
 userForm.addEventListener("submit", (event) => {
 	event.preventDefault()

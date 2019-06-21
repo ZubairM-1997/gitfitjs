@@ -3,7 +3,7 @@
 
 mealForm.addEventListener("submit", (event) => {
 	event.preventDefault()
-	debugger
+
 	mealData()
 })
 
@@ -124,3 +124,32 @@ function deleteMealFromServer(mealObj){
 		method: "DELETE"
 	})
 }
+
+
+let modalContent = document.querySelector("#mealmodal-content")
+
+function showRelevantMeals(mealObj){
+
+	let nameOfMeal = document.createElement("p")
+	let calorieCount = document.createElement("p")
+	let ingredients = document.createElement("p")
+
+	nameOfMeal.innerHTML = `Name: ${mealObj.name}`
+	calorieCount.innerHTML = `Calories: ${mealObj.calories}`
+	ingredients.innerHTML = `Ingredients: ${mealObj.ingredients}`
+
+	modalContent.append(nameOfMeal)
+	modalContent.append(calorieCount)
+	modalContent.append(ingredients)
+
+}
+
+let closeMealBtn = document.getElementById("meal-close")
+
+closeMealBtn.addEventListener("click", () => {
+	mealModal.style.display = "none";
+})
+
+window.addEventListener("click", () => {
+	mealModal.style.display = "none";
+})

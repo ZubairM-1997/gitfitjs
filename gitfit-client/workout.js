@@ -135,4 +135,34 @@ function deleteWorkoutFromServer(workoutObj){
 }
 
 
+let workoutmodalContent = document.querySelector("#workoutmodal-content")
 
+function showRelevantWorkouts(workoutObj){
+
+	let nameOfWorkout = document.createElement("p")
+	let sets = document.createElement("p")
+	let reps = document.createElement("p")
+	let duration = document.createElement("p")
+
+	nameOfWorkout.innerHTML = `Name: ${workoutObj.name}`
+	sets.innerHTML = `Sets: ${workoutObj.sets}`
+	reps.innerHTML = `Reps: ${workoutObj.reps}`
+	duration.innerHTML = `Duration: ${workoutObj.duration}`
+
+
+	workoutmodalContent.append(nameOfWorkout)
+	workoutmodalContent.append(sets)
+	workoutmodalContent.append(reps)
+	workoutmodalContent.append(duration)
+
+}
+
+let closeWorkoutBtn = document.getElementById("workout-close")
+
+closeWorkoutBtn.addEventListener("click", () => {
+	workoutModal.style.display = "none";
+})
+
+window.addEventListener("click", () => {
+	workoutModal.style.display = "none";
+})
