@@ -32,21 +32,21 @@
 				<label for="user_age">Age</label>
 			</div>
 		</div>
-		<input type="number" name="age" placeholder="Enter your age" id="user_age">
+		<input type="number" min=0 name="age" placeholder="Enter your age" id="user_age">
 
 		<div class="row">
 			<div class="col-25">
 				<label for="user_weight">Weight in (kg)</label>
 			</div>
 		</div>
-		<input type="number" name="weight" placeholder="Enter your weight" id="user_weight">
+		<input type="number" min=0 name="weight" placeholder="Enter your weight" id="user_weight">
 
 		<div class="row">
 			<div class="col-25">
 				<label for="user_height">Height in (cm)</label>
 			</div>
 		</div>
-		<input type="number" name="height" placeholder="Enter your height" id="user_height">
+		<input type="number" min=0 name="height" placeholder="Enter your height" id="user_height">
 		<br>
 
 
@@ -119,7 +119,7 @@
 					<label for="calories">Calories</label>
 				</div>
 			</div>
-			<input type="number" name="number" placeholder="Enter your meal" id="calories"><br>
+			<input type="number" min=0 name="number" placeholder="Enter your meal" id="calories"><br>
 
 			<div class="row">
 				<div class="col-25">
@@ -158,14 +158,14 @@
 					<label for="sets">Number of Sets</label>
 				</div>
 			</div>
-			<input type="number" name="sets" placeholder="Enter sets" id="sets"><br>
+			<input type="number" min=0 name="sets" placeholder="Enter sets" id="sets"><br>
 
 			<div class="row">
 				<div class="col-25">
 					<label for="reps">Number of Reps</label>
 				</div>
 			</div>
-			<input type="number" name="reps" placeholder="Enter reps" id="reps"><br>
+			<input type="number" min=0 name="reps" placeholder="Enter reps" id="reps"><br>
 
 
 			<div class="row">
@@ -173,7 +173,7 @@
 					<label for="duration">Time Spent (mins) </label>
 				</div>
 			</div>
-			<input type="number" name="duration" placeholder="How long are you going to take?" id="duration"><br>
+			<input type="number" min=0 name="duration" placeholder="How long are you going to take?" id="duration"><br>
 
 			<input type="submit" value="Submit" class="button">
 

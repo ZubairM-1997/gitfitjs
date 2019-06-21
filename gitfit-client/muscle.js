@@ -24,6 +24,9 @@ function renderMuscle(muscleObj) {
 	showWorkouts.setAttribute("class", "button")
 	showWorkouts.innerText = "Show Workouts"
 
+	let hr = document.createElement("hr")
+	hr.setAttribute("class", "zig-zag")
+
 
 	muscleImage.innerHTML = `<img class="picture" src=${muscleObj.image}>`
 	muscleImage.setAttribute("id", `num-${muscleObj.id}`)
@@ -34,6 +37,8 @@ function renderMuscle(muscleObj) {
 	muscleDiv.appendChild(muscleName)
 	muscleDiv.appendChild(muscleImage)
 	muscleDiv.appendChild(showWorkouts)
+	muscleDiv.appendChild(hr)
+
 	muscleDiv.appendChild(linebreak)
 	muscleDiv.appendChild(br)
 

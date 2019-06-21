@@ -27,8 +27,7 @@ function renderDiet(dietObj) {
 
 	showBtn.setAttribute("class", "button")
 	showBtn.setAttribute("id", `${dietObj.id}`)
-	showBtn.setAttribute("data-target", "#paymentSuccessModal")
-	showBtn.setAttribute("data-toggle", "modal")
+
 
 
 	relevantMeals.setAttribute("id", "relevant-meals")
@@ -42,20 +41,22 @@ function renderDiet(dietObj) {
 	let br = document.createElement("br")
 	let brrt = document.createElement("br")
 
+	let hr = document.createElement("hr")
+	hr.setAttribute("class", "zig-zag")
+
 	dietButton.innerHTML = `${dietObj.name}`
 	dietDescription.innerHTML = `${dietObj.description}`
 	showBtn.innerHTML = "Show Meals"
 
 	dietDiv.append(dietButton)
-
-
 	dietDiv.append(dietDescription)
 	dietDiv.append(showBtn)
-	dietDiv.append(relevantMeals)
+	dietDiv.append(hr)
 
 	dietDiv.append(linebreak)
 	dietDiv.append(br)
 	dietDiv.append(brrt)
+
 
 
 	userInfo.append(dietDiv)
